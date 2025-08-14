@@ -14,14 +14,14 @@ spec:
   systemScaling:
    system_scaling_maxconnectioncount: 1000
    system_scaling_maxqueuemessagecount: 240
-   system_scaling_maxkafkabridgecount: 10
-   system_scaling_maxkafkabrokerconnectioncount: 300
+   system_scaling_maxkafkabridgecount: 0
+   system_scaling_maxkafkabrokerconnectioncount: 0
    system_scaling_maxbridgecount: 25
    system_scaling_maxsubscriptioncount: 500000
    system_scaling_maxguaranteedmessagesize: 30
    messagespool_maxspoolusage: 80000
    messagingNodeCpu: "2"
-   messagingNodeMemory: "7598Mi"
+   messagingNodeMemory: "6898Mi"
   adminCredentialsSecret: solace-admin-credentials
   timezone: Europe/Berlin
   storage:
