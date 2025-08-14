@@ -24,7 +24,7 @@ resource "exoscale_sks_nodepool" "solace-ha" {
   cluster_id         = exoscale_sks_cluster.solace-ha.id
   name               = local.project
   instance_prefix    = local.project
-  instance_type      = "standard.extra-large"
+  instance_type      = "standard.large"
   size               = 3
   security_group_ids = [exoscale_security_group.sks_nodes.id]
   anti_affinity_group_ids = [exoscale_anti_affinity_group.solace-ha.id]
