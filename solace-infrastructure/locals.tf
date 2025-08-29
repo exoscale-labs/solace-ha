@@ -1,4 +1,4 @@
 locals {
   zone = "de-fra-1"
-  project = "solace-ha-test"
+  project = "solace-ha"
 }
