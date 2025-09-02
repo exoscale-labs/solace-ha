@@ -1,4 +1,5 @@
 resource "solacebroker_msg_vpn" "solacebroker_msg_vpn" {
+  authentication_basic_type                = "internal"
   dmr_enabled                              = true
   enabled                                  = true
   max_msg_spool_usage                      = 50000

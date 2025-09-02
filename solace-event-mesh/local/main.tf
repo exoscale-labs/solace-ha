@@ -1,4 +1,5 @@
 resource "solacebroker_msg_vpn" "solacebroker_msg_vpn" {
+  authentication_basic_type                = "internal"
   dmr_enabled                              = true
   enabled                                  = true
   max_msg_spool_usage                      = 50000
@@ -41,4 +42,11 @@ resource "solacebroker_msg_vpn_dmr_bridge" "solacebroker_msg_vpn_dmr_bridge" {
   remote_node_name                         = var.broker_remote_node_name
   msg_vpn_name                             = var.broker_msg_vpn_name
   remote_msg_vpn_name                      = var.broker_remote_msg_vpn_name
+}
+
+resource "solacebroker_msg_vpn_client_username" "solacebroker_msg_vpn_client_username" {
+  client_username  = "default"
+  password         = "default"
+  enabled          = true
+  msg_vpn_name     = var.broker_msg_vpn_name
 }
